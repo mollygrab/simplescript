@@ -1,0 +1,28 @@
+<! DOCTYPE HTML>
+<html>
+<head>
+  <title>A simple slideshow</title>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <img name="slide" src="images/philly1.jpg" />
+  <script language="JavaScript">
+    var i = 0;
+      var path = new Array();
+
+      // LIST OF IMAGES
+      path[0] = "images/philly1.jpg";
+      path[1] = "images/philly2.jpg";
+      path[2] = "images/philly3.jpg";
+
+      function swapImage()
+      {
+        document.slide.src = path[i];
+        if(i < path.length - 1) i++; else i = 0;
+        setTimeout("swapImage()",3000);
+      }
+      window.onload=swapImage;
+  </script>
+</body>
+</html>
